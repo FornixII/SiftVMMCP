@@ -1,0 +1,15 @@
+{
+  "//": "Config for driving the Sift MCP from a local Ollama model.",
+  "//1": "Ollama itself does not speak MCP, so use an MCP host that bridges",
+  "//2": "Ollama <-> MCP. `mcphost` (github.com/mark3labs/mcphost) is the common",
+  "//3": "choice and connects directly to an HTTP MCP server.",
+  "//4": "Install:  go install github.com/mark3labs/mcphost@latest",
+  "//5": "Run:      mcphost -m ollama:qwen2.5 --config ollama_mcphost_config.example.json",
+  "//6": "Docker: http://localhost:8000/mcp. SIFT VM: use the VM IP.",
+  "mcpServers": {
+    "sift": {
+      "type": "streamable",
+      "url": "http://localhost:8000/mcp"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "//": "Claude Desktop config for the Sift MCP server running inside the SIFT VM.",
+  "//1": "Claude Desktop speaks MCP over stdio, so we bridge to the VM's HTTP",
+  "//2": "endpoint with `mcp-remote` (auto-downloaded by npx; requires Node.js).",
+  "//3": "Docker: use http://localhost:8000/mcp. SIFT VM: use the VM IP.",
+  "//4": "On Windows the real file lives at:",
+  "//5": "%APPDATA%\\Claude\\claude_desktop_config.json",
+  "mcpServers": {
+    "sift": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "http://localhost:8000/mcp",
+        "--transport",
+        "http-only"
+      ]
+    }
+  }
+}
